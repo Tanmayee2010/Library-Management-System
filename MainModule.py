@@ -13,7 +13,7 @@ py=sys.executable
 class MainWin(Tk):
     def __init__(self):
         super().__init__()
-        self.iconbitmap(r"C:\Users\tanmayee patil\Downloads\favicon.ico")
+        self.iconbitmap(r"import your favicon.ico path")
         self.configure(bg='gray')
         self.canvas = Canvas(width=1366, height=768, bg='gray')
         self.canvas.pack()
@@ -38,13 +38,13 @@ class MainWin(Tk):
             os.system('%s %s' % (py, 'Remove_student.py'))
 
         def ib():
-            os.system('%s %s' % (py, 'issueTable.py'))
+            os.system('%s %s' % (py, 'IssueBook.py'))
 
         def ret():
-            os.system('%s %s' % (py, 'ret.py'))
+            os.system('%s %s' % (py, 'ReturnBook.py'))
 
         def sea():
-            os.system('%s %s' % (py,'Search.py'))
+            os.system('%s %s' % (py,'SearchBook.py'))
 
         def log():
             conf = messagebox.askyesno("Confirm", "Are you sure you want to Logout?")
@@ -128,9 +128,9 @@ class MainWin(Tk):
             else:
              try:
                 self.conn = mysql.connector.connect(host='localhost',
-                                         database='library',
-                                         user='root',
-                                         password='')
+                                         database='database_name',
+                                         user='username',
+                                         password='user password')
                 self.myCursor = self.conn.cursor()
                 book = int(self.bookid.get())
                 self.myCursor.execute("Select bi.issue_id,s.name,b.name,bi.issue_date,bi.return_date from issue_book bi,student s,book b where s.stud_id = bi.stud_id and b.book_id = bi.book_id and b.book_id = %s",[book])
@@ -147,9 +147,9 @@ class MainWin(Tk):
         def check():
             try:
                 conn = mysql.connector.connect(host='localhost',
-                                         database='library',
-                                         user='root',
-                                         password='')
+                                         database='database_name',
+                                         user='username',
+                                         password='user password')
                 mycursor = conn.cursor()
                 mycursor.execute("Select * from admin")
                 z = mycursor.fetchone()

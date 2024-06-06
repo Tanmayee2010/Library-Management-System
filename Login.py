@@ -28,9 +28,9 @@ class Lib(Tk):
             else:
                 try:
                     conn = mysql.connector.connect(host='localhost',
-                                         database='library',
-                                         user='root',
-                                         password='')
+                                         database='database_name',
+                                         user='username',
+                                         password='user password')
                     cursor = conn.cursor()
                     user = self.user_text.get()
                     password = self.pass_text.get()

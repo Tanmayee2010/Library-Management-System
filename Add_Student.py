@@ -11,7 +11,7 @@ py=sys.executable
 class reg(Tk):
     def __init__(self):
         super().__init__()
-        self.iconbitmap(r"C:\Users\tanmayee patil\Downloads\favicon.ico")
+        self.iconbitmap(r"import your favicon.ico path")
         self.maxsize(500, 417)
         self.minsize(500, 417)
         self.title('Add User')
@@ -26,9 +26,9 @@ class reg(Tk):
         def insert():
             try:
                 self.conn = mysql.connector.connect(host='localhost',
-                                         database='library',
-                                         user='root',
-                                         password='')
+                                         database='database_name',
+                                         user='username',
+                                         password='user password')
                 self.myCursor = self.conn.cursor()
                 self.myCursor.execute("Insert into admin(user,name,password) values (%s,%s,%s)",[u.get(), n.get(), p.get()])
                 self.conn.commit()

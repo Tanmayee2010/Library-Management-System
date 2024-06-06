@@ -10,7 +10,7 @@ py = sys.executable
 class ret(Tk):
     def __init__(self):
         super().__init__()
-        self.iconbitmap(r"C:\Users\tanmayee patil\Downloads\favicon.ico")
+        self.iconbitmap(r"import your favicon.ico path")
         self.title("Return")
         self.maxsize(420,280)
         self.canvas = Canvas(width=500, height=417, bg='gray')
@@ -25,9 +25,9 @@ class ret(Tk):
             else:
                 try:
                     self.conn = mysql.connector.connect(host='localhost',
-                                                        database='library',
-                                                        user='root',
-                                                        password='')
+                                                        database='database_name',
+                                                        user='username',
+                                                        password='user password')
                     self.mycursor = self.conn.cursor()
 
                     self.mycursor.execute("Select book_id from issue_book where return_date = '' and book_id = %s",[a.get()])

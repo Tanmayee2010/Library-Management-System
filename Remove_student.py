@@ -6,7 +6,7 @@ from mysql.connector import Error
 class Rem(Tk):
     def __init__(self):
         super().__init__()
-        self.iconbitmap(r"C:\Users\tanmayee patil\Downloads\favicon.ico")
+        self.iconbitmap(r"import your favicon.ico path")
         self.maxsize(400, 200)
         self.minsize(400, 200)
         self.title("Remove User")
@@ -21,9 +21,9 @@ class Rem(Tk):
                 if d:
                     try:
                         self.conn = mysql.connector.connect(host='localhost',
-                                         database='library',
-                                         user='root',
-                                         password='')
+                                         database='database_name',
+                                         user='username',
+                                         password='user password')
                         self.myCursor = self.conn.cursor()
                         self.myCursor.execute("Delete from admin where id = %s",[a.get()])
                         self.conn.commit()

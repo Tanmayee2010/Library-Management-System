@@ -15,7 +15,7 @@ class Search(Tk):
         self.minsize(800, 500)
         self.canvas = Canvas(width=800, height=500, bg='gray')
         self.canvas.pack()
-        self.iconbitmap(r"C:\Users\tanmayee patil\Downloads\favicon.ico")
+        self.iconbitmap(r"import your favicon.ico path")
         l1=Label(text="Search Library",bg='gray', font=("Courier new",20,'bold')).place(x=290,y=20)
         l = Label(self, text="Search By", bg='gray', font=("Courier new", 15, 'bold')).place(x=60, y=96)
         def insert(data):

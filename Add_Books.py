@@ -10,7 +10,7 @@ py = sys.executable
 class Add(Tk):
     def __init__(self):
         super().__init__()
-        self.iconbitmap(r"C:\Users\tanmayee patil\Downloads\favicon.ico")
+        self.iconbitmap(r"import your favicon.ico path")
         self.maxsize(480,360 )
         self.minsize(480,360)
         self.title('Add Book')
@@ -27,9 +27,9 @@ class Add(Tk):
                 g = 'YES'
                 try:
                     self.conn = mysql.connector.connect(host='localhost',
-                                         database='library',
-                                         user='root',
-                                         password='')
+                                         database='database_name',
+                                         user='username',
+                                         password='user password')
                     self.myCursor = self.conn.cursor()
                     self.myCursor.execute("Insert into book(name,author,availability) values (%s,%s,%s)",[b.get(),c.get(),g])
                     self.conn.commit()

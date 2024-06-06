@@ -13,7 +13,7 @@ py = sys.executable
 class issue(Tk):
     def __init__(self):
         super().__init__()
-        self.iconbitmap(r"C:\Users\tanmayee patil\Downloads\favicon.ico")
+        self.iconbitmap(r"import your favicon.ico path")
         self.title('Library Admisintration')
         self.maxsize(440, 300)
 
@@ -31,9 +31,9 @@ class issue(Tk):
             else:
                 try:
                     self.conn = mysql.connector.connect(host='localhost',
-                                                        database='library',
-                                                        user='root',
-                                                        password='')
+                                                        database='database_name',
+                                                        user='username',
+                                                        password='user password')
                     self.mycursor = self.conn.cursor()
                     self.mycursor.execute("Select availability from book where availability = 'YES' and book_id = %s",
                                           [c.get()])

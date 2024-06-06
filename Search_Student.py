@@ -15,7 +15,7 @@ class Search(Tk):
         self.maxsize(800,520)
         self.canvas = Canvas(width=1366, height=768, bg='gray')
         self.canvas.pack()
-        self.iconbitmap(r"C:\Users\tanmayee patil\Downloads\favicon.ico")
+        self.iconbitmap(r"import your favicon.ico path")
         l1=Label(self,text="Search Student",bg='gray', font=("Courier new",20,'bold')).place(x=290,y=40)
         l = Label(self, text="Search By",bg='gray', font=("Courier new", 15, 'bold')).place(x=180, y=100)
 
@@ -34,9 +34,9 @@ class Search(Tk):
             elif self.combo.get() == 'Name':
                 try:
                     self.conn = mysql.connector.connect(host='localhost',
-                                         database='library',
-                                         user='root',
-                                         password='')
+                                         database='database_name',
+                                         user='username',
+                                         password='user password')
                     self.mycursor = self.conn.cursor()
                     name = self.entry.get()
                     self.mycursor.execute("Select * from student where name like %s",['%'+name+'%'])
@@ -50,9 +50,9 @@ class Search(Tk):
             elif self.combo.get() == 'ID':
                 try:
                     self.conn = mysql.connector.connect(host='localhost',
-                                         database='library',
-                                         user='root',
-                                         password='')
+                                         database='database_name',
+                                         user='username',
+                                         password='user password')
                     self.mycursor = self.conn.cursor()
                     id = self.entry.get()
                     self.mycursor.execute("Select * from student where stud_id like %s", ['%' + id + '%'])

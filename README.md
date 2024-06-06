@@ -11,10 +11,17 @@ Library Management System will deal in the entire requirement needed for managin
 
 **##Modules:**
 1.Login.py - To Login the user or admin
+
 2.MainModule.py - This is the main module 
+
 3.SearchBook.py - To View the list of books in the Library
+
 4.Add_Books.py - To Add the book in Library
+
 5.IssueBook.py - To Issue a book from Library
+
 6.ReturnBook.py - To Return a book to the Library
+
 7.Add_Student.py - To Add an User from Library
+
 8.Remove_student.py - To Remove an User from Library

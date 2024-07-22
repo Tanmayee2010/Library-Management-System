@@ -25,3 +25,5 @@ Library Management System will deal in the entire requirement needed for managin
 7.Add_Student.py - To Add an User from Library
 
 8.Remove_student.py - To Remove an User from Library
+
+For any queries send mail on **tanmayeepatil1620@gmail.com**
